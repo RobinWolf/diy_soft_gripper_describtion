@@ -9,12 +9,17 @@
 
 
 <!--build the gripper links and joints using a macro, which will be called in the diy_gripper_model.urdf.xacro while launching-->
-  <xacro:macro name="diy_soft_gripper" params="tf_prefix">
-    <link name="${tf_prefix}_base_link">
+  <xacro:macro name="diy_soft_gripper" params="tf_prefix parent *origin"> 
+      <joint name="${tf_prefix}gripper_to_parent" type="fixed">
+        <parent link="${parent}"/>
+        <child link="${tf_prefix}base_link"/>
+    </joint>
+
+    <link name="${tf_prefix}base_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/visual/base_link.stl" />
+          <mesh filename="package://diy_soft_gripper_description/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="grey" />
       </visual>
@@ -28,18 +33,18 @@
     -->
     </link>
 
-    <joint name="${tf_prefix}_right_joint" type="fixed">
-      <origin xyz="0 0.0457554015893473 -0.0272203446692936" rpy="0 0 0" />
-      <parent link="${tf_prefix}_base_link" />
-      <child link="${tf_prefix}${fingertf_prefix}_right_finger" />
+    <joint name="${tf_prefix}right_joint" type="fixed">
+      <origin xyz="-0.003 0.00875 0.033" rpy="${pi} 0 ${pi}" />
+      <parent link="${tf_prefix}base_link" />
+      <child link="${tf_prefix}right_finger" />
       <axis xyz="0 0 1" />
     </joint>
 
-    <link name="${tf_prefix}_right_finger">
+    <link name="${tf_prefix}right_finger">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/visual/soft_finger.stl" />
+          <mesh filename="package://diy_soft_gripper_description/meshes/visual/soft_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="orange" />
       </visual>
@@ -53,18 +58,18 @@
     -->
     </link>
 
-    <joint name="${tf_prefix}_left_joint" type="fixed">
-      <origin xyz="0 0.0457554015893473 -0.0272203446692936" rpy="0 0 0" />
-      <parent link="${tf_prefix}_base_link" />
-      <child link="${tf_prefix}${fingertf_prefix}_left_finger" />
+    <joint name="${tf_prefix}left_joint" type="fixed">
+      <origin xyz="0.003 -0.00875 0.033" rpy="${pi} 0 0" />
+      <parent link="${tf_prefix}base_link" />
+      <child link="${tf_prefix}left_finger" />
       <axis xyz="0 0 1" />
     </joint>
 
-    <link name="${tf_prefix}_left_finger">
+    <link name="${tf_prefix}left_finger">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/visual/soft_finger.stl" />
+          <mesh filename="package://diy_soft_gripper_description/meshes/visual/soft_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="orange" />
       </visual>

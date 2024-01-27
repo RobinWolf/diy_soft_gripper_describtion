@@ -47,6 +47,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/urdf"
     "/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/launch"
     "/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/meshes"
+    "/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/rviz"
     )
 endif()
 

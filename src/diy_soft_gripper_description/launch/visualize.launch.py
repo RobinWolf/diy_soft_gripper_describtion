@@ -6,7 +6,7 @@ from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-    description_package = "DIY_soft_gripper_description"
+    description_package = "diy_soft_gripper_description"
 
     declared_arguments = []
     declared_arguments.append(
@@ -31,6 +31,9 @@ def generate_launch_description():
     )
     robot_description = {"robot_description": robot_description_content}
 
+    rviz_config_file = PathJoinSubstitution([FindPackageShare(description_package), "rviz", "rviz_config.rviz"]) # define path to rviz-config file
+
+
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -42,6 +45,7 @@ def generate_launch_description():
         executable="rviz2",
         name="rviz2",
         output="log",
+        arguments=["-d", rviz_config_file]
     )
 
     nodes_to_start = [

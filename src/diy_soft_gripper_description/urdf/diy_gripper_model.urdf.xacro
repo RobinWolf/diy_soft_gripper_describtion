@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro"
        name="diy_gripper">
-    <xacro:include filename="$(find diy_soft_gripper_description/urdf/diy_gripper_macro.urdf.xacro"/>
+    <xacro:include filename="$(find diy_soft_gripper_description)/urdf/diy_gripper_macro.urdf.xacro"/>
 
     <xacro:arg name="tf_prefix" default=""/>
 
