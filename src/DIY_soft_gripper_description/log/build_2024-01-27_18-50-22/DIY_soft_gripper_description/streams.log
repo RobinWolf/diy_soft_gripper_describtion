@@ -1,0 +1,35 @@
+[0.072s] Invoking command in '/home/hephaestus/ros2_ws/src/DIY_soft_gripper_description/build/DIY_soft_gripper_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hephaestus/ros2_ws/src/DIY_soft_gripper_description -DCMAKE_INSTALL_PREFIX=/home/hephaestus/ros2_ws/src/DIY_soft_gripper_description/install/DIY_soft_gripper_description
+[0.316s] -- The C compiler identification is GNU 11.4.0
+[0.484s] -- The CXX compiler identification is GNU 11.4.0
+[0.501s] -- Detecting C compiler ABI info
+[0.622s] -- Detecting C compiler ABI info - done
+[0.631s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.632s] -- Detecting C compile features
+[0.633s] -- Detecting C compile features - done
+[0.637s] -- Detecting CXX compiler ABI info
+[0.767s] -- Detecting CXX compiler ABI info - done
+[0.776s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.776s] -- Detecting CXX compile features
+[0.777s] -- Detecting CXX compile features - done
+[0.784s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.137s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.308s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[1.309s]   By not providing "Findxacro.cmake" in CMAKE_MODULE_PATH this project has
+[1.309s]   asked CMake to find a package configuration file provided by "xacro", but
+[1.309s]   CMake did not find one.
+[1.309s] 
+[1.309s]   Could not find a package configuration file provided by "xacro" with any of
+[1.309s]   the following names:
+[1.310s] 
+[1.310s]     xacroConfig.cmake
+[1.310s]     xacro-config.cmake
+[1.310s] 
+[1.310s]   Add the installation prefix of "xacro" to CMAKE_PREFIX_PATH or set
+[1.310s]   "xacro_DIR" to a directory containing one of the above files.  If "xacro"
+[1.310s]   provides a separate development package or SDK, be sure it has been
+[1.310s]   installed.
+[1.311s] 
+[1.311s] [0m
+[1.311s] -- Configuring incomplete, errors occurred!
+[1.311s] See also "/home/hephaestus/ros2_ws/src/DIY_soft_gripper_description/build/DIY_soft_gripper_description/CMakeFiles/CMakeOutput.log".
+[1.314s] Invoked command in '/home/hephaestus/ros2_ws/src/DIY_soft_gripper_description/build/DIY_soft_gripper_description' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hephaestus/ros2_ws/src/DIY_soft_gripper_description -DCMAKE_INSTALL_PREFIX=/home/hephaestus/ros2_ws/src/DIY_soft_gripper_description/install/DIY_soft_gripper_description

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!--define the macro, included in diy_gripper_model-->
+<!--this structure defines transformation between actuator and joint spaces (gear-reduction)-->
+<!--operates not inside the Hardware interface, instead it operates before or after the controller update in read() and write() method-->
+
+
+<!-- NOTE: we will not use this macro, because our gripper is force-controlled without using ros2-control-->
+
+
+  <xacro:macro name="gripper_transmissions" params="prefix">  <!--prefix can be choosen when including this macro in the model.xacro to avoid name collisions-->
+
+    <transmission name="${prefix}finger_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+
+      <!--refers to all joints calles finger_joint in the model.xacro file-->
+      <joint name="${prefix}finger_joint">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+
+      <actuator name="${prefix}finger_joint_motor">
+        <mechanicalReduction>1</mechanicalReduction>  <!--define the mechanical gear reduction here!-->
+      </actuator>
+
+    </transmission>
+  </xacro:macro>
+</robot>

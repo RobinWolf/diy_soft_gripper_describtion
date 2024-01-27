@@ -1,0 +1,50 @@
+[1.649s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper']
+[1.649s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1363e18460>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7f1363e19450>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7f1363e19450>>)
+[1.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.713s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper'
+[1.713s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extensions ['ignore', 'ignore_ament_install']
+[1.713s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'ignore'
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'ignore_ament_install'
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extensions ['colcon_pkg']
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'colcon_pkg'
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extensions ['colcon_meta']
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'colcon_meta'
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extensions ['ros']
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'ros'
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extensions ['cmake', 'python']
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'cmake'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'python'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extensions ['python_setup_py']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper) by extension 'python_setup_py'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/log) by extensions ['ignore', 'ignore_ament_install']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/log) by extension 'ignore'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/log) ignored
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extensions ['ignore', 'ignore_ament_install']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'ignore'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'ignore_ament_install'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extensions ['colcon_pkg']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'colcon_pkg'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extensions ['colcon_meta']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'colcon_meta'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extensions ['ros']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'ros'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extensions ['cmake', 'python']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'cmake'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'python'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extensions ['python_setup_py']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src) by extension 'python_setup_py'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extensions ['ignore', 'ignore_ament_install']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extension 'ignore'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extension 'ignore_ament_install'
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extensions ['colcon_pkg']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extension 'colcon_pkg'
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extensions ['colcon_meta']
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extension 'colcon_meta'
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extensions ['ros']
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description) by extension 'ros'
+[1.732s] DEBUG:colcon.colcon_core.package_identification:Package '/home/robin/hka_projects/DIYrobotics/develop/DIY-SoftGripper/src/DIY_soft_gripper_description' with type 'ros.ament_cmake' and name 'DIY_soft_gripper_description'
+[1.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
