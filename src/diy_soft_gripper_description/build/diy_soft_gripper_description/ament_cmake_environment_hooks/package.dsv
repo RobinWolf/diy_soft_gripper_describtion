@@ -1,0 +1,4 @@
+source;share/diy_soft_gripper_description/local_setup.bash
+source;share/diy_soft_gripper_description/local_setup.dsv
+source;share/diy_soft_gripper_description/local_setup.sh
+source;share/diy_soft_gripper_description/local_setup.zsh

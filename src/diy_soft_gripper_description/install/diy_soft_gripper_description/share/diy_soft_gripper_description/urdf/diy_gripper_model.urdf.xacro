@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro"
+       name="diy_gripper">
+    <xacro:include filename="$(find diy_soft_gripper_description/urdf/diy_gripper_macro.urdf.xacro"/>
+
+    <xacro:arg name="tf_prefix" default=""/>
+
+    <link name="world"/>
+
+    <xacro:diy_soft_gripper tf_prefix="$(arg tf_prefix)" parent="world">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:diy_soft_gripper>
+</robot>

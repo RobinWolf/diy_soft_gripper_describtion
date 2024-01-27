@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!--include the transmissions macro , will not be used in this case but interesting when controlling the gripper via ros2_control position interface-->
+  <!--<xacro:include filename="$(find diy_soft_gripper_description)/urdf/diy_gripper_transmissions.urdf.xacro" /> -->
+
+<!--include the material/ colors macro-->
+  <xacro:include filename="$(find diy_soft_gripper_description)/urdf/materials.urdf.xacro" />
+
+
+<!--build the gripper links and joints using a macro, which will be called in the diy_gripper_model.urdf.xacro while launching-->
+  <xacro:macro name="diy_soft_gripper" params="tf_prefix">
+    <link name="${tf_prefix}_base_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/visual/base_link.stl" />
+        </geometry>
+        <material name="grey" />
+      </visual>
+    <!--
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/base_link.stl" />
+        </geometry>
+      </collision>
+    -->
+    </link>
+
+    <joint name="${tf_prefix}_right_joint" type="fixed">
+      <origin xyz="0 0.0457554015893473 -0.0272203446692936" rpy="0 0 0" />
+      <parent link="${tf_prefix}_base_link" />
+      <child link="${tf_prefix}${fingertf_prefix}_right_finger" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <link name="${tf_prefix}_right_finger">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/visual/soft_finger.stl" />
+        </geometry>
+        <material name="orange" />
+      </visual>
+    <!--
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/soft_finger.stl" />
+        </geometry>
+      </collision>
+    -->
+    </link>
+
+    <joint name="${tf_prefix}_left_joint" type="fixed">
+      <origin xyz="0 0.0457554015893473 -0.0272203446692936" rpy="0 0 0" />
+      <parent link="${tf_prefix}_base_link" />
+      <child link="${tf_prefix}${fingertf_prefix}_left_finger" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <link name="${tf_prefix}_left_finger">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/visual/soft_finger.stl" />
+        </geometry>
+        <material name="orange" />
+      </visual>
+    <!--
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/soft_finger.stl" />
+        </geometry>
+      </collision>
+    -->
+    </link>
+  </xacro:macro>
+
+
+<!--<xacro:robotiq_arg2f_transmission tf_prefix="${tf_prefix}"/>, currently not used, because gripper is force-controlled without using ros2_control-->
+</robot>

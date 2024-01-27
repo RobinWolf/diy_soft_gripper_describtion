@@ -18,6 +18,11 @@ RUN groupadd -g $GID $USER \
     && useradd -m -u $UID -g $GID -p "$(openssl passwd -1 $PASSWORD)" \
     --shell $(which bash) $USER -G sudo
 
+#install xacro package (additional necessarity when not using the ur-package from ros)
+USER root
+RUN apt-get update && apt-get install -y ros-humble-xacro
+USER ${USER}
+
 # Setup workpace
 USER $USER
 RUN mkdir -p /home/$USER/ros2_ws/src
