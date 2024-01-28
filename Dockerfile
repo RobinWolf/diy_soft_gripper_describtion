@@ -39,7 +39,7 @@ USER $USER
 
 # Clone the diy-soft-gripper-description package into its own workspace
 RUN mkdir -p /home/$USER/dependencies/diy_soft_gripper_description_ws/src
-RUN cd /home/$USER/dependencies/robotiq_ws/src && \
+RUN cd /home/$USER/dependencies/diy_soft_gripper_description_ws/src && \
     git clone https://github.com/RobinWolf/diy_soft_gripper_describtion.git
 
 # Build the diy-gripper package
@@ -49,7 +49,7 @@ RUN cd /home/$USER/dependencies/diy_soft_gripper_description_ws && \
 
 # Add built diy-gripper package to entrypoint
 USER root
-RUN sed -i 's|exec "\$@"|source "/home/'"${USER}"'/dependencies/robotiq_ws/install/setup.bash"\n&|' /ros_entrypoint.sh
+RUN sed -i 's|exec "\$@"|source "/home/'"${USER}"'/dependencies/diy_soft_gripper_description_ws/install/setup.bash"\n&|' /ros_entrypoint.sh
 USER $USER
 
 ##############################################################################
