@@ -1,6 +1,6 @@
 #!/bin/bash
 ##############################################################################
-##                   Build the image, using dev.Dockerfile                  ##
+##                      Build the image, using Dockerfile                   ##
 ##############################################################################
 ROS_DISTRO=humble
 
@@ -8,26 +8,24 @@ uid=$(eval "id -u")
 gid=$(eval "id -g")
 
 #pass some arguments and settings to the dev.Dockerfile while building the image (dev.Dockerfile)
-#name of the image builded here: utomaton-dev/ros-render:"ROS-Distribution eg humble"
+#name of the image builded here: automaton-dev/ros-render:"ROS-Distribution eg humble"
 docker build \
   --build-arg ROS_DISTRO="$ROS_DISTRO" \
   --build-arg UID="$uid" \
   --build-arg GID="$gid" \
-  -f dev.Dockerfile \
+  -f Dockerfile \
   -t automaton-dev/ros-render:"$ROS_DISTRO" .
 
 ##############################################################################
 ##                            Run the container                             ##
 ##############################################################################
 SRC_CONTAINER=/home/hephaestus/ros2_ws/src
-SRC_HOST="$(pwd)"/src                           #use a src on host machine to develop code, mout it to the container to run code inside the container
-
+SRC_HOST="$(pwd)"/src                           #mounting src is not needed because we clone the package from git in Dockerfile stage 2
 docker run \
   --name robot_cell \
   --rm \
   -it \
   --net=host \
-  -v "$SRC_HOST":"$SRC_CONTAINER":rw \
   -e DISPLAY="$DISPLAY" \
   automaton-dev/ros-render:"$ROS_DISTRO"
 
