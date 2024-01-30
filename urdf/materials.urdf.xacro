@@ -8,7 +8,7 @@ https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_desc
 
   <xacro:macro name="materials" params="tf_prefix">
 
-    <material name="${tf_prefix}black">
+    <material name="${tf_prefix}blackk">
       <color rgba="0.0 0.0 0.0 1.0"/>
     </material>
 
