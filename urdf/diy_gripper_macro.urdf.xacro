@@ -23,7 +23,7 @@
         <geometry>
           <mesh filename="package://diy_soft_gripper_description/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/>
         </geometry>
-        <material name="grey" />
+        <material name="${tf_prefix}grey" />
       </visual>
     <!--
       <collision>
@@ -48,7 +48,7 @@
         <geometry>
           <mesh filename="package://diy_soft_gripper_description/meshes/visual/soft_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
-        <material name="orange" />
+        <material name="${tf_prefix}orange" />
       </visual>
     <!--
       <collision>
@@ -73,7 +73,7 @@
         <geometry>
           <mesh filename="package://diy_soft_gripper_description/meshes/visual/soft_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
-        <material name="orange" />
+        <material name="${tf_prefix}orange" />
       </visual>
     <!--
       <collision>
