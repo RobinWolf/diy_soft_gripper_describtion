@@ -13,7 +13,6 @@
     <xacro:materials tf_prefix="${tf_prefix}"/>
     
       <joint name="${tf_prefix}gripper_to_parent" type="fixed">
-        <origin xyz="0 0 0.095" rpy="0 0 0"/>
         <parent link="${parent}"/>
         <child link="${tf_prefix}base_link"/>
     </joint>
