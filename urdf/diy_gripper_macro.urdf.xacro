@@ -29,7 +29,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/tool.stl" />
+          <mesh filename="package://diy_soft_gripper_description/meshes/collision/tool.stl" />
         </geometry>
       </collision>
     </link>
