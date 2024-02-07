@@ -25,14 +25,13 @@
         </geometry>
         <material name="${tf_prefix}grey" />
       </visual>
-    <!--
+    
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/base_link.stl" />
+          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/tool.stl" />
         </geometry>
       </collision>
-    -->
     </link>
 
     <joint name="${tf_prefix}right_joint" type="fixed">
@@ -50,14 +49,6 @@
         </geometry>
         <material name="${tf_prefix}orange" />
       </visual>
-    <!--
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/soft_finger.stl" />
-        </geometry>
-      </collision>
-    -->
     </link>
 
     <joint name="${tf_prefix}left_joint" type="fixed">
@@ -75,17 +66,8 @@
         </geometry>
         <material name="${tf_prefix}orange" />
       </visual>
-    <!--
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="$(find diy_soft_gripper_description)/meshes/collision/soft_finger.stl" />
-        </geometry>
-      </collision>
-    -->
     </link>
   </xacro:macro>
 
 
-<!--<xacro:robotiq_arg2f_transmission tf_prefix="${tf_prefix}"/>, currently not used, because gripper is force-controlled without using ros2_control-->
 </robot>
