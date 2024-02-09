@@ -73,11 +73,11 @@
    <!--add a TCP Link for convenience, show TCP reference set in rviz-->
     <joint name="tcp_joint" type="fixed"> 
         <origin xyz="0 0 0.08" rpy="0 0 0"/>
-        <parent link="$(arg tf_prefix)base_link"/>
-        <child link="$(arg tf_prefix)tcp_link"/>    
+        <parent link="${tf_prefix}base_link"/>
+        <child link="${tf_prefix}tcp_link"/>    
     </joint>
 
-    <link name="$(arg tf_prefix)tcp_link"/>
+    <link name="${tf_prefix}tcp_link"/>
 
 
 </robot>
