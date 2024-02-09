@@ -68,10 +68,9 @@
         <material name="${tf_prefix}orange" />
       </visual>
     </link>
-  </xacro:macro>
 
-   <!--add a TCP Link for convenience, show TCP reference set in rviz-->
-    <joint name="tcp_joint" type="fixed"> 
+    <!--add a TCP Link for convenience, show TCP reference set in rviz-->
+    <joint name="${tf_prefix}tcp_joint" type="fixed"> 
         <origin xyz="0 0 0.08" rpy="0 0 0"/>
         <parent link="${tf_prefix}base_link"/>
         <child link="${tf_prefix}tcp_link"/>    
@@ -79,5 +78,6 @@
 
     <link name="${tf_prefix}tcp_link"/>
 
+  </xacro:macro>
 
 </robot>
