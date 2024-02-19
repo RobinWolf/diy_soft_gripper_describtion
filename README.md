@@ -26,7 +26,7 @@ URDF means unified robotics description format and is an extensible markup langu
 
 We structured our gripper-urdf with this approach:
 
-![gripper_files](images/gripper_files.png)
+![gripper_files_params](images/gripper_files_params.png)
 
 The gripper has 3 different links (one base and the two jaws) which are connected with fixed joints due to simplicity reasons. We decided to this simplified approach for the gripper because on the one hand we have no status feedback from the hardware (open loop control) and on the other hand we only have a two possible states (open and closed). Furthermore our gripper hardware is force-limited and not position controlled. Without a hardware state interface we are not able to determine the current open-width of the gripper jaws, so displaying somenthing what's not proper real doesn't make sence in our opinion.
 
