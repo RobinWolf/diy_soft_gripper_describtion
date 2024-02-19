@@ -66,6 +66,7 @@ There are multiple ways to define the link geometry, but we will load them from 
 Moreover it's a common approcah to use two seperate geometry definitions for a visual mesh (displayed in rviz) and a collision mesh (used for collision-checking and motion planning). The collision meshes are strongly simplified versions of the real (visual) geometry, this will save computing power and runtime when operating the robot.
 In common you define a visual and a collision mesh for every link, but our gripper consists only of fixed links we decided to load only one collision mesh for all three links. That's why you won't find collision properties in the jaw-links.
 
+For further convenience we add an additional TCP-Link without any geomatry. That gives us the opportunity to program trajectories for the TCP in the application later.
 The following graphic shuold clarify our URDF definition at all:
 
 ![links_gripper](images/links_gripper.png)
