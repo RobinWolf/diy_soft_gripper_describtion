@@ -1,6 +1,6 @@
 # DIY-SoftGripper
 
-## thematical Classification
+## Thematical Classification
 This repository contains a ROS2 package which contains the description files for our developed parallel kinematics gripper with adaptive soft-fingers attached.
 
 ![gripper_description_einordnung](images/gripper_description_einordnung.png)
@@ -72,4 +72,6 @@ The following graphic shuold clarify our URDF definition at all:
 
 
 ## Launch Files and parametrized Values
+To run the package inside a docker container, you just have to navigate in terminal to the ```` ./run.sh```` script and source it. This will automatically build and source your ROS Workspace and launch Rviz for visualization purposes.
 
+This practice will launch Rviz with the saved configuration (rviz_config.rviz) and default Launch Argument for tf_prefix. You now should see the visualization of your URDF definition "diy_soft_gripper_model.urdf.xacro".
