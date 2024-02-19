@@ -26,7 +26,7 @@ URDF means unified robotics description format and is an extensible markup langu
 
 We structured our gripper-urdf with this approach:
 
-------URDF Grahical structure-------
+![gripper_files](images/gripper_files.png)
 
 The gripper has 3 different links (one base and the two jaws) which are connected with fixed joints due to simplicity reasons. We decided to this simplified approach for the gripper because on the one hand we have no status feedback from the hardware (open loop control) and on the other hand we only have a two possible states (open and closed). Furthermore our gripper hardware is force-limited and not position controlled. Without a hardware state interface we are not able to determine the current open-width of the gripper jaws, so displaying somenthing what's not proper real doesn't make sence in our opinion.
 
@@ -65,9 +65,10 @@ Let's go on with the definition of our child link. In the link definition we can
 There are multiple ways to define the link geometry, but we will load them from stl-meshes which are exported from our CAD-system. Please make sure that the definition of the CAD-reference sets equals this you need in the URDF definition!
 Moreover it's a common approcah to use two seperate geometry definitions for a visual mesh (displayed in rviz) and a collision mesh (used for collision-checking and motion planning). The collision meshes are strongly simplified versions of the real (visual) geometry, this will save computing power and runtime when operating the robot.
 In common you define a visual and a collision mesh for every link, but our gripper consists only of fixed links we decided to load only one collision mesh for all three links. That's why you won't find collision properties in the jaw-links.
+
 The following graphic shuold clarify our URDF definition at all:
 
----- URDF Graphical links------
+![links_gripper](images/links_gripper.png)
 
 
 ## Launch Files and parametrized Values
