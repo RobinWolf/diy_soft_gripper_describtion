@@ -32,29 +32,30 @@ The gripper has 3 different links (one base and the two jaws) which are connecte
 Let's have a deeper look into the definition of the links and joints. The main kinematic properties are defined in the diy_gripper_macro.urdf.xacro, so we refer to this file.
 Definition of the base is given for example:
 
-    <joint name="${tf_prefix}gripper_to_parent" type="fixed">
-        <parent link="${parent}"/>
-        <child link="${tf_prefix}base_link"/>
-    </joint>
+```xml
+<joint name="${tf_prefix}gripper_to_parent" type="fixed">
+    <parent link="${parent}"/>
+    <child link="${tf_prefix}base_link"/>
+</joint>
 
-    <link name="${tf_prefix}base_link">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://diy_soft_gripper_description/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/>
-        </geometry>
-        <material name="${tf_prefix}grey" />
-      </visual>
-    
-      <collision>
-        <origin xyz="0 0 0.028" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://diy_soft_gripper_description/meshes/collision/tool.stl" scale="0.001 0.001 0.001"/>
-        </geometry>
-        <material name="${tf_prefix}red" />
-      </collision>
-    </link>
+<link name="${tf_prefix}base_link">
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://diy_soft_gripper_description/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="${tf_prefix}grey" />
+  </visual>
 
+  <collision>
+    <origin xyz="0 0 0.028" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://diy_soft_gripper_description/meshes/collision/tool.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="${tf_prefix}red" />
+  </collision>
+</link>
+```
 Every joint represents a new reference set which is defined in reference to the origin of its parent link. It's a common approach that the origin of the child link equals the reference set of the joint which connects the child link to its parent link, please note that in the given code above.
 If you do so, the only way to orient the links and relative to each other is the definition of the joint origin with 3 prismatic degrees of freedom for the position and 3 euler-angles for the orientation. Because we define our joints as "fixed" the definition of a axis can be neglected.
 
