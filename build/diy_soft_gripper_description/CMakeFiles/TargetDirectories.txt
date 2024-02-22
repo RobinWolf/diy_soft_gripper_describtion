@@ -1,9 +1,0 @@
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/uninstall.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/diy_soft_gripper_description_uninstall.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/test.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/edit_cache.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/rebuild_cache.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/list_install_components.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/install.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/install/local.dir
-/home/hephaestus/ros2_ws/src/diy_soft_gripper_description/build/diy_soft_gripper_description/CMakeFiles/install/strip.dir

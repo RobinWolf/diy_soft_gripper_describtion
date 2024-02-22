@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-<!--include the transmissions macro , will not be used in this case but interesting when controlling the gripper via ros2_control position interface-->
-  <!--<xacro:include filename="$(find diy_soft_gripper_description)/urdf/diy_gripper_transmissions.urdf.xacro" /> -->
 
 <!--include the material/ colors macro-->
   <xacro:include filename="$(find diy_soft_gripper_description)/urdf/materials.urdf.xacro" />
@@ -12,7 +10,7 @@
   <xacro:macro name="diy_soft_gripper" params="tf_prefix parent *origin"> 
     <xacro:materials tf_prefix="${tf_prefix}"/>
     
-      <joint name="${tf_prefix}gripper_to_parent" type="fixed">
+    <joint name="${tf_prefix}gripper_to_parent" type="fixed">
         <parent link="${parent}"/>
         <child link="${tf_prefix}base_link"/>
     </joint>
